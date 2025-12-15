@@ -1,0 +1,17 @@
+import json
+import random
+
+def dict_to_json():
+    data = {
+        "nuray": random.randint(1, 100),
+        "aysu": random.randint(1, 100),
+        "meryem": random.randint(1, 100),
+        "leyla": random.randint(1, 100),
+        "sema": random.randint(1, 100)
+    }
+
+    json_data = json.dumps(data, indent=4)
+    print(json_data)
+
+
+dict_to_json()
