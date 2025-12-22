@@ -224,5 +224,7 @@ def handle_revoked_token_error(jwt_header, jwt_payload):
 # START APPLICATION
 # ------------------------------
 if __name__ == "__main__":
-    init_db()
+    # Burada application context daxilində database-i initialize edirik
+    with app.app_context():
+        init_db()
     app.run(debug=True)
